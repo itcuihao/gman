@@ -30,6 +30,6 @@ go install -v ./...
 
 ## License
 
-© CH, 2018
+© CH. 2018
 
 Released under the [MIT License](https://github.com/itcuihao/gorm/blob/master/License)

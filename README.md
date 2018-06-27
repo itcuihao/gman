@@ -2,7 +2,7 @@
 
 Linux command assistant for Go.
 
-![.](./image/man.png)
+<!-- ![.](./image/man.png) -->
 
 <p align='center'>
     <img src='./image/man.png'>

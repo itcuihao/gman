@@ -32,4 +32,4 @@ go install -v ./...
 
 © CH. 2018
 
-Released under the [MIT License](https://github.com/itcuihao/gorm/blob/master/License)
+Released under the [MIT License](https://github.com/itcuihao/gman/blob/master/License)

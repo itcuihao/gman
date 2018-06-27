@@ -1,17 +1,23 @@
 # Gman
 
+Linux command assistant for Go.
+
 ![.](./image/man.png)
 
-Linux command assistant for Go.
+<p align='center'>
+    <img src='./image/mam.png'>
+</p>
 
 ## Getting Started
 
 ```
 git clone https://github.com/itcuihao/gman.git $GOPATH/src/gman
 
-cd gman
+cd $GOPATH/gman
 
 make
+
+gman
 ```
 
 Alternative Install Options
@@ -22,6 +28,8 @@ git clone https://github.com/itcuihao/gman.git $GOPATH/src/gman
 cd $GOPATH/gman
 
 go install -v ./...
+
+gman
 ```
 
 ## Source

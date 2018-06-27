@@ -22,6 +22,10 @@ cd $GOPATH/gman
 go install -v ./...
 ```
 
+## Source
+
+[每日一linux命令](http://www.cnblogs.com/peida/tag/每日一linux命令/)
+
 ## License
 
 © CH, 2018

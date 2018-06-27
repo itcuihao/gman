@@ -5,7 +5,7 @@ Linux command assistant for Go.
 ![.](./image/man.png)
 
 <p align='center'>
-    <img src='./image/mam.png'>
+    <img src='./image/man.png'>
 </p>
 
 ## Getting Started

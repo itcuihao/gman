@@ -1,11 +1,11 @@
 # Gman
 
-Linux command assistant for Go.
-
-<!-- ![.](./image/man.png) -->
-
 <p align='center'>
     <img src='./image/man.png'>
+</p>
+
+<p align='center'>
+Linux command assistant for Go.
 </p>
 
 ## Getting Started

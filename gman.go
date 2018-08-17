@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"gman/sys"
 	"os"
 
 	chc "github.com/itcuihao/gman/commands"
@@ -32,8 +33,14 @@ func realMain() int {
 
 	v := chc.GetCommand(flags.Arg(0))
 
+	fmt.Println("---------v:---------", v)
 	if len(v) > 0 {
-		fmt.Fprintf(os.Stderr, v)
+		// fmt.Fprintf(os.Stderr, v)
+
+		if err := sys.ExceShell(fmt.Sprintf("echo %s | less", v)); err != nil {
+			fmt.Println(err)
+			return 1
+		}
 	} else {
 		printUsage()
 	}

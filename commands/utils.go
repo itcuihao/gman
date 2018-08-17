@@ -57,6 +57,7 @@ var commands = map[string]string{
 	"rpc":        rpc,
 	"scp":        scp,
 	"wget":       wget,
+	"ch":         ch,
 }
 
 // GetCommand get command

@@ -1,13 +1,16 @@
 package sys
 
 import (
+	"bufio"
 	"bytes"
+	"fmt"
+	"io"
 	"log"
 	"os/exec"
 )
 
 // ExceShell 执行
-func ExceShell(s string) error {
+func ExecShell(s string) error {
 	cmd := exec.Command("/bin/bash", "-c", s)
 
 	var (
@@ -22,6 +25,38 @@ func ExceShell(s string) error {
 		log.Println(err, stderr.String())
 		return err
 	}
-	log.Println(out.String())
+	fmt.Println(out.String())
+	return nil
+}
+
+// ExecRowShell 按行执行
+func ExecRowShell(s string, n int) error {
+	cmd := exec.Command("/bin/bash", "-c", s)
+	// fmt.Println(cmd.Args)
+	// var (
+	// 	out    bytes.Buffer
+	// 	stderr bytes.Buffer
+	// )
+
+	out, err := cmd.StdoutPipe()
+	if err != nil {
+		return err
+	}
+	defer out.Close()
+
+	cmd.Start()
+
+	nr := bufio.NewReader(out)
+
+	for i := 0; i < n; i++ {
+		l, err := nr.ReadString('\n')
+		if err != nil || io.EOF == err {
+			break
+		}
+		fmt.Println(l)
+	}
+
+	cmd.Wait()
+
 	return nil
 }
